@@ -15,7 +15,7 @@ h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:28px 0 8px;border-top:
 </head>
 <body><main>
 <h1>VideoStation Privacy Policy</h1>
-<p class="muted">Last updated: November 9, 2026</p>
+<p class="muted">Last updated: November 10, 2026</p>
 
 <p>VideoStation is a private publishing tool operated by the owner of the YouTube channel
 <b>Whimquuark</b>. It runs only on the owner's own computer and is used only by the owner to upload
@@ -30,6 +30,9 @@ YouTube API Services:</p>
 (for example processing status and privacy setting).</li>
 <li><b>yt-analytics.readonly</b> – to read summary statistics such as views and watch time for the
 owner's own videos.</li>
+<li><b>youtube.force-ssl</b> – to add or update the English caption (subtitle) track on the owner's own
+uploaded videos (YouTube captions.insert / captions.update). VideoStation does not use this permission to
+edit, delete, rate, or comment on any video, and does not access other channels' captions.</li>
 </ul>
 
 <h2>How the data is used</h2>
@@ -42,7 +45,8 @@ build profiles of viewers, and does not access any other user's channel.</p>
 <li>Google sign-in tokens are stored only in the operating system's credential store
 (Windows Credential Manager) on the owner's computer. They are never stored in code, configuration
 files, logs, or chat messages.</li>
-<li>VideoStation stores only video IDs, upload status, and summary statistics for the owner's dashboard.</li>
+<li>VideoStation stores only video IDs, upload and caption status, and summary statistics for the owner's dashboard.
+Caption files are the owner's own files and are only sent to YouTube for the owner's own videos.</li>
 <li>No data is sent to any server operated by VideoStation; the tool communicates only with Google /
 YouTube APIs and the owner's private Discord server for status notifications.</li>
 </ul>
@@ -51,8 +55,9 @@ YouTube APIs and the owner's private Discord server for status notifications.</l
 <p>VideoStation does not sell, rent, or share any data obtained from YouTube API Services with third parties.</p>
 
 <h2>Revoking access and deleting data</h2>
-<p>Access can be revoked at any time at
-<a href="https://myaccount.google.com/permissions">Google Account → Third-party connections</a>.
+<p>Access can be revoked at any time on the Google security settings page:
+<a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>
+(Google Account → Security → Third-party connections → VideoStation → Remove access).
 Revoking access, or removing the stored credential from the computer, stops all access. Locally
 stored status data can be deleted by the owner at any time; it is also deleted within 30 days after
 access is revoked.</p>
